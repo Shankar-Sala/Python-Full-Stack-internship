@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio and video</title>
+</head>
+<body>
+    <video id="myVideo" controls autoplay loop style="width:100%; height:auto;">
+        <source src="video1.mp4" type="video/mp4">
+    </video>
+ 
+    <audio id="myAudio" controls autoplay loop >
+        <source src="audio1.mp3" type="audio/mp3">
+    </audio>
+    
+    <script>
+        var video = document.getElementById('myVideo');
+        var audio = document.getElementById('myAudio');
+
+        video.onplay = function() {
+            audio.play();
+        };
+    </script>
+</body>
+</html>
